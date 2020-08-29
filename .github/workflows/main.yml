@@ -7,7 +7,7 @@ on:
       - '*'
 
 env:
-  PACKAGE_NAME: luci-app-v2ray
+  PACKAGE_NAME: luci-app-passwall
   CACHE_DIR: ~/cache
 
 jobs:
@@ -104,7 +104,7 @@ jobs:
         sed -i 's#git.openwrt.org/project/luci#github.com/openwrt/luci#' feeds.conf
         sed -i 's#git.openwrt.org/feed/telephony#github.com/openwrt/telephony#' feeds.conf
         sed -i 's#git.openwrt.org/feed/telephony#github.com/openwrt/telephony#' feeds.conf
-        echo "src-git lienol https://github.com/Lienol/openwrt-package" >> feeds.conf
+        echo "src-git lienol https://github.com/xiaorouji/openwrt-package" >> feeds.conf
 
         cd -
 
@@ -174,4 +174,3 @@ jobs:
       with:
         name: ${{ env.PACKAGE_NAME }}
         path: '*.ipk'
-
