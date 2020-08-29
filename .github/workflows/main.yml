@@ -151,7 +151,7 @@ jobs:
         cd "$SDK_HOME"
 
         make defconfig
-        make package/${PACKAGE_NAME}/compile V=s
+        make package/feeds/lienol/${PACKAGE_NAME}/compile V=s
 
         find "$SDK_HOME/bin/" -type f -name "*.ipk" -exec ls -lh {} \;
 
